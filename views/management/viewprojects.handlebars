@@ -1,0 +1,59 @@
+<a href="projects">Return to Projects</a>
+         <div class="row">
+          <h1 class="viewheader">Project 1000023</h1>
+          <h2 class="status">Ongoing</h2>
+        </div>
+        <div class="row">
+        <p class="viewproject"><strong>Project Name</strong>: Casan Residencia</p>
+        <p class="viewproject2"><strong>Engineer Head</strong>: Arthur McArthur</p>
+        </div>
+        <div class="row">
+        <p class="viewproject"><strong>No of Units:</strong> Casan Residencia</p>
+        <p class="viewproject3"><strong>Engineer-in-Charge:</strong> Roland</p>
+        </div>
+        <div class="row filter">
+        <button type="button" class="btn btn-unit btn-primary" data-toggle="modal" data-target="#exampleModalCenter">New Unit</button>
+        
+         </div>
+
+<div class="fixed">
+ {{> table tableColumns=columns tableData=data}}
+</div>
+  </div>
+  </div> 
+     
+
+
+
+         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="MyModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content modal-unit">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">New Unit</h5>
+      </div>
+      <div class="modal-body">
+     <form action="#" method="POST">
+        <div class="settings">
+          <label for="template" class="col-form-label">CHOOSE A TEMPLATE</label>
+          <select class="unit" id="mytemplate">
+          <option disabled selected value></option>
+          <option>Test</option>
+          </select>
+          <label for="first-name" class="col-form-label">START DATE</label>
+          <input type="text" id="first-name">
+          <label for="last-name" class="col-form-label">EXPECTED DATE OF<br>COMPLETION</label>
+          <input type="text" id="last-name">
+
+          
+
+        </div>    
+  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-transparent" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-save">Save</button>
+      </div>
+    </div>
+        </form>
+  </div>
+</div>

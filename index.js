@@ -340,7 +340,11 @@ app.get('/projects', (req, res) => {
 });
 
 app.get('/createprojects', (req, res) => {
-  res.render('management/projects', { active: {projects: true}, pageHeader: "Create a New Project"});
+  res.render('management/createprojects', { active: {projects: true}, pageHeader: "Create a New Project"});
+});
+
+app.get('/viewprojects', (req, res) => {
+  res.render('management/viewprojects', { active: {projects: true}, data: projectsData, columns: projectsColumns, pageHeader: "Projects"});
 });
 
 app.get('/po', (req, res) => {
