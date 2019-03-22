@@ -1,0 +1,48 @@
+
+  <h1 class="page-header">{{pageHeader}}</h1>
+    <a href="creatematerials"><button class="btn btn-primary">New Material</button></a>
+
+
+    <div class="row filter materialsrow">
+      <p>Material:</p>
+
+      <!-- materials lookup from table-->
+
+      <select class="materialsbutton" id="materialsdropdown">
+        <option><!-- get materials from db--></option>
+      </select>
+
+      <div class="dropdown">
+        <button onclick="filter()" class="dropbtn">Filter</button>
+        <div id="myDropdown" class="dropdown-content">
+          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+          <a href="#about">Filter test</a>
+        </div>
+      </div>
+    </div>
+    <div class="fixed">
+      {{> table tableColumns=columns tableData=data}}
+    </div>
+
+
+<script>
+  function filter() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+      txtValue = a[i].textContent || a[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        a[i].style.display = "";
+      } else {
+        a[i].style.display = "none";
+      }
+    }
+  }
+</script>

@@ -1,0 +1,43 @@
+
+ <h1 class="page-header">{{pageHeader}}</h1>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">New Employee</button>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="MyModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">New Employee</h5>
+
+          </div>
+          <div class="modal-body">
+            
+        <!-- post modal employee-->
+        <form action="#" method="POST">
+        <div class="settings">
+          <label for="first-name" class="col-form-label">First Name</label>
+          <input type="text" id="first-name">
+          <label for="last-name" class="col-form-label">Last Name</label>
+          <input type="text" id="last-name">
+          <label for="user-name" class="col-form-label">User Name</label>
+          <input type="text" id="user-name">
+          <label for="password" class="col-form-label">Password</label>
+          <input type="text" id="password">
+          <label for="position" class="col-form-label">Position</label>
+          <select class="unit" id="myposition">
+          <option disabled selected value></option>
+          <option>Test</option>
+          </select>
+        </div>
+     
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-transparent" data-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-save">Save</button>
+      </div>
+       </form>
+    </div>
+  </div>
+</div>
+ <div class="fixed">
+
+ {{> table tableColumns=columns tableData=data}}
+</div>

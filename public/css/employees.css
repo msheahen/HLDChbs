@@ -166,7 +166,7 @@ div.creatematerialrow {
     }
 }
 .headerrow {
-  width: 99%;
+  width: 100%;
   border-bottom: 3px solid #444444;
 }
 @keyframes ring {

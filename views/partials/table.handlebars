@@ -1,0 +1,30 @@
+<table class="table table-striped employee ">
+  <thead>
+    <div class="row">
+      <tr class="headerrow">
+    </div>
+
+    {{#each tableColumns as |column|}}
+      <th>{{column.value}}</th>
+    {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tableData as |row|}}
+      <tr>
+        {{#../tableColumns as |col|}}
+          <td>
+            {{#if col.editable}}
+              <select id="myList">
+                <option>Edit</option>
+                <option>Delete</option>
+              </select>
+            {{else}}
+              {{lookup row col.name}}
+            {{/if}}
+          </td>
+        {{/../tableColumns}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
