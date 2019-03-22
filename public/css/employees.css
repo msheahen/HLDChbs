@@ -10,7 +10,9 @@
     height: 100%;
   }
 }
-
+.left {
+  margin-left: 1%;
+}
 
 .modal-dialog {
   display: inline-block;
