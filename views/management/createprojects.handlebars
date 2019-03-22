@@ -1,0 +1,46 @@
+ <a class="return font" href="projects">Return to Projects</a>
+         <div class="row">
+         <h1 class="projheader">{{pageHeader}}</h1>
+        </div>
+        <div class="row spacing">
+        <form action="#" method="POST">
+          <div class="required">
+            <h2 class="headercol1"><label for="projectname">PROJECT NAME:</label></h2>
+            <h2 class="headercol2 label1"><label for="startdate">START DATE:</label></h2>
+          </div>
+          <div class="row">
+            <input class="text-input projectinput" type="text" name="projectname" required>
+            <input class="date-input" type="date" name="projectdate" required>
+          </div>
+          <div class="required">
+            <h2 class="headercol1"><label for="projectlocation">PROJECT LOCATION:</label></h2>
+            <h2 class="headercol3 "><label class= "label2" for="completiondate">EXPECTED DATE OF COMPLETION:</label></h2>
+        
+          </div>
+          <div class="row">
+            <input class="text-input projectinput" type="text" name="projectlocation" required>
+            <input class="date-input" type="date" name="completiondate" required>
+          </div>
+          <div class="required">
+          <h2 class="headercol1"><label for="engineer-in-charge">ENGINEER-IN-CHARGE:</label></h2>
+          <div class="row">
+            <select class="dd headercol1" id = "engineer-in-charge" class="projdropdown" required>
+            <option disabled selected value></option>
+            <option>Test</option>
+           </select>
+         </div>
+          <div class="required">
+          <h2 class="headercol1"><label for="engineer-in-charge">ENGINEER HEAD:</label></h2>
+          <div class="row">
+            <select class="dd headercol1" id = "engineer-in-charge" class="projdropdown" required>
+            <option disabled selected value></option>
+            <option>ENGINEER HEAD:</option>
+           </select>
+         </div>
+     
+        </div>
+         <div class="modal-footer projectfooter">
+        <a href="projects.html"><button type="button" class="btn btn-transparent">Cancel</button></a>
+        <button type="submit" class="btn btn-save">Submit</button>
+      </div>
+         </form>

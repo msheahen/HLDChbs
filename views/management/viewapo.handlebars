@@ -1,0 +1,29 @@
+ 
+
+        <a class="font" href="po">Return to Purchase Orders</a>
+         
+
+          <a class="option" href="projects.html">Print</a>
+          <a class="option" href="projects.html">Export</a>
+
+<div class="row">
+ <h1 class="viewheader">{{pageHeader}}</h1>
+</div>
+
+ <div class="rowbody">
+          <div class="row">
+            <p class="viewproject"><strong>Status</strong>: <span class="delivered">Delivered</span></p>
+          </div>
+           <div class="row">
+           <p class="viewproject"><strong>Supplier</strong>: Fujjan Corporation</p>
+          </div>
+           <div class="row">
+            <p class="viewproject"><strong>Date Created</strong>: 02/24/2019</p>
+          </div>
+           <div class="row">
+            <p class="viewproject"><strong>Requested By</strong>: Vianne Borja</p>
+          </div>
+
+           <div class="fixed ">
+   {{> table tableColumns=columns tableData=data}}
+ </div>

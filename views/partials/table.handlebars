@@ -15,8 +15,11 @@
         {{#../tableColumns as |col|}}
           <td>
             {{#if col.editable}}
-              <select id="myList">
+              <select id="myList" name="myList" onchange="window.location.href=this.value">
                 <option>Edit</option>
+                {{#if active.materials}}
+                <option value="../po">View</option>
+                {{/if}}
                 <option>Delete</option>
               </select>
             {{else}}
