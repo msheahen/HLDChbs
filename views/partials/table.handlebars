@@ -19,11 +19,10 @@
             {{#if col.editable}}
               <select id="myList" name="myList" onchange="window.location.href=this.value">
                 <option>Edit</option>
-               
-                <option value=" ../viewapo">View</option>
-{{#if active.materials}}
-{{/if}}
-            
+               {{#if active.po}}
+                <option value="../viewapo">View</option>
+                {{/if}}
+                <option>Edit</option>
                 <option>Delete</option>
               </select>
             {{else}}

@@ -195,6 +195,20 @@ let materialData = [{
  "action": "Action"
 }];
 
+let templatesData = [{
+ "template": "1001",
+ "dateCreated": "Aug 21, 2018",
+ "action": "Action"
+},{
+ "template": "1001",
+ "dateCreated": "Aug 21, 2018",
+ "action": "Action"
+},{
+ "template": "1001",
+ "dateCreated": "Aug 21, 2018",
+ "action": "Action"
+}];
+
 let projectsColumns = [{
   "name": "id",
   "value": "ID",
@@ -244,6 +258,21 @@ let employeeColumns = [{
 },{
  "name": "position",
  "value": "Position",
+ "editable": false
+},{
+ "name": "action",
+ "value": "Action",
+ "editable": true
+}];
+
+
+let templatesColumns = [{
+ "name": "template",
+ "value": "Template",
+ "editable": false
+},{
+ "name": "dateCreated",
+ "value": "Date Created",
  "editable": false
 },{
  "name": "action",
@@ -339,6 +368,7 @@ app.get('/projects', (req, res) => {
   res.render('management/projects', { active: {projects: true}, data: projectsData, columns: projectsColumns, pageHeader: "Projects"});
 });
 
+
 app.get('/createprojects', (req, res) => {
   res.render('management/createprojects', { active: {projects: true}, pageHeader: "Create a New Project"});
 });
@@ -354,6 +384,11 @@ app.get('/po', (req, res) => {
 app.get('/viewapo', (req, res) => {
   res.render('management/viewapo', { active: {PO: true}, data: poviewData, columns: poviewColumns, pageHeader: "Purchase Orders"});
 });
+
+app.get('/templates', (req, res) => {
+  res.render('management/templates', { active: {templates: true}, data: templatesData, columns: templatesColumns, pageHeader: "Templates"});
+});
+
 
 app.get('/materials', (req, res) => {
   res.render('management/materials', { active: {materials: true}, data: materialData, columns: materialColumns, pageHeader: "Materials"});
